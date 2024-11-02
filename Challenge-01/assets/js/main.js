@@ -1,5 +1,6 @@
 // Invoking functions from a file "./funOperations.js"
 import * as funOperations from "./funOperations.js"
+
 // Get the three principal values (operator, prime number, second number)
 let operationInput, number1, number2
 
@@ -54,4 +55,42 @@ if ((operationInput !== "Factorial" && operationInput !== "factorial" && operati
             break
         }
     }
+}
+
+/**
+ * Perform the user's desired operation and display the output to the user
+ */
+switch (operationInput) {
+
+    case 'Sum': case 'sum': case '+':
+        alert(`${number1} + ${number2} = ${number1 + number2}`)
+        break;
+
+    case 'Subtrack': case 'subtrack': case '-':
+        alert(`${number1} - ${number2} = ${number1 - number2}`)
+        break;
+
+    case 'Multiply': case 'multiply': case '*':
+        alert(`${number1} * ${number2} = ${number1 * number2}`)
+        break;
+
+    case 'Divide': case 'divide': case '/':
+        alert(`${number1} / ${number2} = ${number1 / number2}`)
+        break;
+
+    case 'Power': case 'power': case '**':
+        alert(`${number1} ** ${number2} = ${number1 ** number2}`)
+        break;
+
+    case 'Factorial': case 'factorial': case '!':
+        alert(`!${number1} = ${funOperations.factorial(number1)}`)
+        break;
+
+    case 'IsPrime': case 'isprime': case '`':
+        alert(`IsPrime ${number1} = ${funOperations.isPrime(number1)}`)
+        break;
+
+    default:
+        break;
+
 }
